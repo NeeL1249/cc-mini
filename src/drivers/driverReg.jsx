@@ -97,16 +97,16 @@ function DriverForms() {
             <br />
             <div className="input-group">
               <label
-                htmlFor="companyName"
+                htmlFor="cName"
                 className="text-left block text-gray-700 text-sm font-bold mb-2"
               >
                 Company Name:
               </label>
               <input
                 type="text"
-                name="companyName"
+                name="cName"
                 className="border border-gray-400 rounded px-3 py-2 w-full"
-                value={formData.companyName}
+                value={formData.cName}
                 onChange={handleInputChange}
                 required
                 size="70"
@@ -114,16 +114,16 @@ function DriverForms() {
             </div>
             <div className="input-group">
               <label
-                htmlFor="driverName"
+                htmlFor="name"
                 className="text-left block text-gray-700 text-sm font-bold mb-2"
               >
                 Driver Name:
               </label>
               <input
                 type="text"
-                name="driverName"
+                name="name"
                 className="border border-gray-400 rounded px-3 py-2 w-full"
-                value={formData.driverName}
+                value={formData.name}
                 onChange={handleInputChange}
                 required
                 size="70"
@@ -131,7 +131,24 @@ function DriverForms() {
             </div>
             <div className="input-group">
               <label
-                htmlFor="phoneNumber"
+                htmlFor="email"
+                className="text-left block text-gray-700 text-sm font-bold mb-2"
+              >
+                Driver Email:
+              </label>
+              <input
+                type="text"
+                name="email"
+                className="border border-gray-400 rounded px-3 py-2 w-full"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+                size="70"
+              />
+            </div>
+            <div className="input-group">
+              <label
+                htmlFor="phoneNo"
                 className="text-left block text-gray-700 text-sm font-bold mb-2"
               >
                 Phone Number:
@@ -139,8 +156,8 @@ function DriverForms() {
               <input
                 type="text"
                 className="text-left border border-gray-400 rounded px-3 py-2 w-full"
-                name="phoneNumber"
-                value={formData.phoneNumber}
+                name="phoneNo"
+                value={formData.phoneNo}
                 onChange={handleInputChange}
                 required
                 size="70"
@@ -148,7 +165,7 @@ function DriverForms() {
             </div>
             <div className="input-group">
               <label
-                htmlFor="licenseNumber"
+                htmlFor="licenseNo"
                 className="text-left block text-gray-700 text-sm font-bold mb-2"
               >
                 License Number:
@@ -156,9 +173,9 @@ function DriverForms() {
               <input
                 type="text"
                 className=" border border-gray-400 rounded px-3 py-2 w-full"
-                id="licenseNumber"
-                name="licenseNumber"
-                value={formData.licenseNumber}
+                id="licenseNo"
+                name="licenseNo"
+                value={formData.licenseNo}
                 onChange={handleInputChange}
                 required
                 size="70"
@@ -166,16 +183,16 @@ function DriverForms() {
             </div>
             <div className="input-group">
               <label
-                htmlFor="driverAddress"
+                htmlFor="address"
                 className="text-left block text-gray-700 text-sm font-bold mb-2"
               >
                 Driver Address:
               </label>
               <input
                 type="text"
-                name="driverAddress"
+                name="address"
                 className="border border-gray-400 rounded px-3 py-2 w-full"
-                value={formData.driverAddress}
+                value={formData.address}
                 onChange={handleInputChange}
                 required
                 size="70"
@@ -200,7 +217,7 @@ function DriverForms() {
             </div>
             <div className="input-group">
               <label
-                htmlFor="expiryDate"
+                htmlFor="licenseExpiry"
                 className="text-left block text-gray-700 text-sm font-bold mb-2"
               >
                 Date of Expiry of license:
@@ -208,8 +225,8 @@ function DriverForms() {
               <input
                 type="date"
                 className="border border-gray-400 rounded px-3 py-2 w-full"
-                name="expiryDate"
-                value={formData.expiryDate}
+                name="licenseExpiry"
+                value={formData.licenseExpiry}
                 onChange={handleInputChange}
                 min={new Date().toISOString().split("T")[0]}
                 required

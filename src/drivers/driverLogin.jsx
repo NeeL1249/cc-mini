@@ -52,7 +52,7 @@ function LoginDriver() {
     };
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/drivers/login",
+        "https://b1vzweyv57.execute-api.ap-south-1.amazonaws.com/api/driver/login",
         formData
       );
       console.log(res);

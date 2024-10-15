@@ -41,7 +41,7 @@ function LoginOwner() {
     };
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/users/login",
+        "https://b1vzweyv57.execute-api.ap-south-1.amazonaws.com/api/user/login",
         formData
       );
       console.log(res);

@@ -7,8 +7,13 @@ import "./bg.css";
 
 function Navbar() {
   return (
-    <nav className="flex justify-center items-center flex-wrap bg-gray-900 p-4 font-sans"> {/* Apply font-sans class to the nav element */}
-      <Link to="/" className="text-cyan-400 underline-none mr-auto text-xl font-serif">
+    <nav className="flex justify-center items-center flex-wrap bg-gray-900 p-4 font-sans">
+      {" "}
+      {/* Apply font-sans class to the nav element */}
+      <Link
+        to="/"
+        className="text-cyan-400 underline-none mr-auto text-xl font-serif"
+      >
         BusInfo
       </Link>
       <div className="flex justify-center items-center space-x-4">
@@ -25,8 +30,6 @@ function Navbar() {
     </nav>
   );
 }
-
-
 
 function DriverForms() {
   const [formData, setFormData] = useState({
@@ -50,7 +53,6 @@ function DriverForms() {
     setFormData({ ...formData, [name]: files[0] });
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -65,12 +67,12 @@ function DriverForms() {
       formDataToSend.append("licensePhoto", formData.licensePhoto);
 
       const response = await axios.post(
-        "http://localhost:3000/api/drivers/register",
+        "https://b1vzweyv57.execute-api.ap-south-1.amazonaws.com/api/driver/register",
         formDataToSend
       );
       console.log(response.data);
-      if(response.status >= 200){
-        window.location.href = '/driver';
+      if (response.status >= 200) {
+        window.location.href = "/driver";
       }
     } catch (error) {
       console.error("Error submitting form:", error);

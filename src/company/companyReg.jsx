@@ -8,11 +8,17 @@ import "./bg.css";
 function Navbar() {
   return (
     <nav className="flex justify-center items-center flex-wrap bg-gray-900 p-4">
-      <Link to="/" className="text-cyan-400 underline-none mr-auto text-xl font-serif">
+      <Link
+        to="/"
+        className="text-cyan-400 underline-none mr-auto text-xl font-serif"
+      >
         BusInfo
       </Link>
       <div className="flex justify-center items-center space-x-4">
-        <Link to="/" className="text-white hover:text-blue-500 underline-none font-sans">
+        <Link
+          to="/"
+          className="text-white hover:text-blue-500 underline-none font-sans"
+        >
           Home
         </Link>
         <Link
@@ -25,7 +31,6 @@ function Navbar() {
     </nav>
   );
 }
-
 
 function UserRegistrationForm() {
   const [formData, setFormData] = useState({
@@ -55,11 +60,13 @@ function UserRegistrationForm() {
       };
 
       const response = await axios.post(
-        "http://localhost:3000/api/users/register",
+        "https://b1vzweyv57.execute-api.ap-south-1.amazonaws.com/api/user/register",
         userData
       );
       if (response.status === 201 || 200) {
-        window.alert("Company successfully registered. Please check your email to verify yourself.");
+        window.alert(
+          "Company successfully registered. Please check your email to verify yourself."
+        );
         setFormData({
           companyName: "",
           email: "",

@@ -29,11 +29,11 @@ function Navbar() {
 
 
 function LoginDriver() {
-  const [phoneNo, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handlePhoneChange = (e) => {
-    setPhoneNumber(e.target.value);
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
@@ -42,12 +42,12 @@ function LoginDriver() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!phoneNo || !password) {
+    if (!email || !password) {
       alert("Phone number and password are required.");
       return;
     }
     const formData = {
-      phoneNo,
+      email,
       password,
     };
     try {
@@ -92,7 +92,7 @@ function LoginDriver() {
               type="text"
               placeholder="Enter your phone number"
               value={phoneNo}
-              onChange={handlePhoneChange}
+              onChange={handleEmailChange}
             />
           </div>
         </div>

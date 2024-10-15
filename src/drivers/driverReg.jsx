@@ -33,13 +33,14 @@ function Navbar() {
 
 function DriverForms() {
   const [formData, setFormData] = useState({
-    companyName: "",
-    driverName: "",
-    phoneNumber: "",
-    licenseNumber: "",
-    driverAddress: "",
+    cName: "",
+    name: "",
+    email: "",
+    phoneNo: "",
+    licenseNo: "",
+    address: "",
     password: "",
-    expiryDate: "",
+    licenseExpiry: "",
     licensePhoto: null,
   });
 
@@ -57,13 +58,14 @@ function DriverForms() {
     e.preventDefault();
     try {
       const formDataToSend = new FormData();
-      formDataToSend.append("companyName", formData.companyName);
-      formDataToSend.append("driverName", formData.driverName);
-      formDataToSend.append("phoneNumber", formData.phoneNumber);
-      formDataToSend.append("licenseNumber", formData.licenseNumber);
-      formDataToSend.append("driverAddress", formData.driverAddress);
+      formDataToSend.append("cName", formData.cName);
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("phoneNo", formData.phoneNo);
+      formDataToSend.append("licenseNo", formData.licenseNo);
+      formDataToSend.append("address", formData.address);
       formDataToSend.append("password", formData.password);
-      formDataToSend.append("expiryDate", formData.expiryDate);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("licenseExpiry", formData.licenseExpiry);
       formDataToSend.append("licensePhoto", formData.licensePhoto);
 
       const response = await axios.post(

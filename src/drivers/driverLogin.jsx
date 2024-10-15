@@ -43,7 +43,7 @@ function LoginDriver() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || !password) {
-      alert("Phone number and password are required.");
+      alert("Email and password are required.");
       return;
     }
     const formData = {
@@ -82,16 +82,16 @@ function LoginDriver() {
             className="text-left block text-gray-700 text-sm font-bold mb-2"
             htmlFor="email"
           >
-            Phone Number
+            email
           </label>
           <div className="flex items-center border-b  border-blue-500 py-2">
             <FontAwesomeIcon icon={faEnvelope} className="mr-2 text-blue-500" />
             <input
               className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
-              id="phoneNo"
+              id="email"
               type="text"
-              placeholder="Enter your phone number"
-              value={phoneNo}
+              placeholder="Enter your email"
+              value={email}
               onChange={handleEmailChange}
             />
           </div>
